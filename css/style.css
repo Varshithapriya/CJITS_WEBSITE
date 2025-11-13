@@ -178,12 +178,13 @@ footer {
   width: 80px;
 }
 
+/* Faculty images fix */
 .faculty-member img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 200px;      /* set uniform width */
+  height: 200px;     /* set uniform height */
+  object-fit: cover; /* crops extra parts but keeps proportions clean */
+  border-radius: 10px; /* optional: smooth corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* optional: subtle shadow */
 }
 
 .faculty-member h3 {
@@ -252,4 +253,5 @@ footer {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+
 
