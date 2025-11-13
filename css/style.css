@@ -72,7 +72,7 @@ main {
 .slideshow {
   position: relative;
   overflow: hidden;
-  max-width: 100%;
+  width: 95%;
   height: 650px;
   background-color: #f0f0f0;  /* consistent background */
   padding: 10px;
@@ -158,4 +158,97 @@ footer {
   .departments {
     flex-direction: column;
   }
+}
+/* Faculty Page */
+.faculty-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.faculty-member {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px;
+}
+
+.faculty-member img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.faculty-member h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.faculty-member p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.faculty-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.event-videos {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.event-videos h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.video-gallery iframe {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.video-gallery iframe:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .video-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.map-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.map-section h2 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.map-container {
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
