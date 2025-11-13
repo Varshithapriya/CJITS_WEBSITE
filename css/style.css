@@ -170,27 +170,31 @@ footer {
 
 .faculty-member {
   text-align: center;
-  background: white;
+  background: #ffffff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 80px;
+  width: 220px; /* fixed uniform width */
 }
 
-/* Faculty images fix */
 .faculty-member img {
-  width: 200px;      /* set uniform width */
-  height: 200px;     /* set uniform height */
-  object-fit: cover; /* crops extra parts but keeps proportions clean */
-  border-radius: 10px; /* optional: smooth corners */
-  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* optional: subtle shadow */
+  width: 100%;
+  height: 250px;         /* uniform image height */
+  object-fit: cover;     /* crops neatly */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.faculty-member:hover img {
+  transform: scale(1.03);
 }
 
 .faculty-member h3 {
   color: #003366;
   font-size: 1.1rem;
-  margin-bottom: 5px;
+  margin: 10px 0 5px;
 }
 
 .faculty-member p {
@@ -199,9 +203,32 @@ footer {
 }
 
 .faculty-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .faculty-member {
+    width: 200px; /* slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .faculty-list {
+    gap: 25px;
+  }
+  .faculty-member {
+    width: 45%; /* two per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-member {
+    width: 90%; /* one per row on small screens */
+  }
+}
+
 
 .event-videos {
   margin-top: 40px;
@@ -253,5 +280,6 @@ footer {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+
 
 
